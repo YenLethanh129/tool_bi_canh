@@ -1,0 +1,22 @@
+{
+  "edgeProfile": "./.edge-profile-LeUyen",
+  "headless": false,
+  "discordUrl": "https://discord.com/app",
+
+  "channelUrl": "https://discord.com/channels/111111111111111111111111/000000000000000000000000",
+  "navTimeoutMs": 15000,
+  "delayMin": 500,
+  "delayMax": 500,
+  "afterClickMs": 2500,
+  "settleMs": 900,
+
+  "maxAttempts": 1,
+  "retryMs": 150,
+
+  "tryMs": 1000,
+  "findTimeoutMs": 20000,
+
+  "loop": true,
+  "loopDelay": 1000,
+  "restart": true
+}

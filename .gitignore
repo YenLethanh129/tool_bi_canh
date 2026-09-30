@@ -1,0 +1,8 @@
+node_modules/
+config.json
+*.log
+
+.edge-profile*/
+
+document.md
+config.*.txt

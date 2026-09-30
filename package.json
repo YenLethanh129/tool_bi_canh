@@ -1,0 +1,19 @@
+{
+  "name": "tool-bi-canh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CLI tool quet va tuong tac nut bam (button) trong message Discord",
+  "main": "index.js",
+  "scripts": {
+    "scan": "node index.js scan",
+    "click": "node index.js click",
+    "watch": "node index.js watch"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "discord.js-selfbot-v13": "^3.7.1",
+    "playwright-core": "^1.63.0"
+  }
+}
