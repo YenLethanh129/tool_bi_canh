@@ -83,7 +83,7 @@ Mọi thông số nằm trong `config.json`, xem `config.example.json` để bi�
 | `loop`                  | false       | chạy lặp vô hạn                                |
 | `loopDelay`             | 3000        | chờ giữa 2 lần quét khi không bấm được (ms)    |
 | `restart`               | true        | bấm xong quay lại bước đầu                     |
-| `reloadPlan`            | false       | đọc lại file plan ở đầu mỗi vòng              |
+| `reloadPlan`            | false       | đọc lại file plan ở đầu mỗi vòng               |
 | `headless`              | false       | `true` = chạy ẩn, không mở cửa sổ              |
 
 Xem toàn bộ thông số kèm kiểu dữ liệu và mặc định:
@@ -98,11 +98,11 @@ node edge.js config
 thời gian chờ 1 step = maxAttempts × retryMs     (mặc định 12 × 250 = 3 giây)
 ```
 
-Bot phản ứng chậm thì tăng:
+Bot phản ứng chậm thì giảm:
 
 ```json
-"maxAttempts": 20,
-"retryMs": 300
+"maxAttempts": 5,
+"retryMs": 250
 ```
 
 ---
