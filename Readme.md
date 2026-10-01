@@ -83,7 +83,14 @@ Mọi thông số nằm trong `config.json`, xem `config.example.json` để bi�
 | `loop`                  | false       | chạy lặp vô hạn                                |
 | `loopDelay`             | 3000        | chờ giữa 2 lần quét khi không bấm được (ms)    |
 | `restart`               | true        | bấm xong quay lại bước đầu                     |
+| `reloadPlan`            | false       | đọc lại file plan ở đầu mỗi vòng              |
 | `headless`              | false       | `true` = chạy ẩn, không mở cửa sổ              |
+
+Xem toàn bộ thông số kèm kiểu dữ liệu và mặc định:
+
+```powershell
+node edge.js config
+```
 
 **Chờ bao lâu** không phải do đoán:
 
@@ -138,6 +145,35 @@ node edge.js run plan.json --loop true
 ```
 
 Chạy tới khi bạn bấm `Ctrl+C`. Phù hợp khi bot tự đưa tin nhắn mới và cần bấm ngay.
+
+### Sửa plan khi tool đang chạy
+
+Bật `reloadPlan` trong `config.json`:
+
+```json
+"loop": true,
+"reloadPlan": true
+```
+
+Từ đó ở đầu mỗi vòng tool đọc lại `plan.json`. Sửa file (thêm bớt nút, đổi tên
+nút) thì vòng sau dùng ngay bản mới, in:
+
+```
+đã nạp lại kế hoạch: 12 bước (12 bước bấm)
+```
+
+Trong lúc bạn đang lưu file mà JSON chưa hoàn chỉnh, tool **không** chết — nó in
+cảnh báo rồi dùng lại bản plan hợp lệ cuối cùng:
+
+```
+đọc lại kế hoạch lỗi (plan/KD.json không parse duoc: ...), dùng kế hoạch hiện tại
+```
+
+Đổi cả `"url"` trong plan cũng có tác dụng, nhưng chỉ mở lại trang khi url thật sự
+đổi — không mở lại mỗi vòng để khỏi mất vị trí cuộn.
+
+`reloadPlan` không có tác dụng khi plan lấy từ `--step` trên dòng lệnh (không có
+file nào để đọc lại), tool sẽ nhắc lúc chạy.
 
 ---
 

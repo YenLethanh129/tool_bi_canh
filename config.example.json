@@ -1,22 +1,23 @@
 {
-  "edgeProfile": "./.edge-profile-LeUyen",
+  "edgeProfile": "./.edge-profile",
   "headless": false,
   "discordUrl": "https://discord.com/app",
 
   "channelUrl": "https://discord.com/channels/111111111111111111111111/000000000000000000000000",
-  "navTimeoutMs": 15000,
-  "delayMin": 500,
-  "delayMax": 500,
-  "afterClickMs": 2500,
+  "navTimeoutMs": 30000,
+  "delayMin": 1200,
+  "delayMax": 3500,
+  "afterClickMs": 1500,
   "settleMs": 900,
 
-  "maxAttempts": 1,
-  "retryMs": 150,
+  "maxAttempts": 12,
+  "retryMs": 250,
 
-  "tryMs": 1000,
+  "tryMs": 2500,
   "findTimeoutMs": 20000,
 
   "loop": true,
-  "loopDelay": 1000,
-  "restart": true
+  "loopDelay": 3000,
+  "restart": true,
+  "reloadPlan": false
 }
