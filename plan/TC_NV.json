@@ -1,0 +1,21 @@
+{
+  "steps": [
+    { "text": "Bắt Đầu" },
+    { "text": "Chiến Tiếp" },
+    { "text": "TIẾP TỤC" },
+    { "text": "KHAI CHIẾN" },
+
+    { "text": "hái thuốc" },
+    { "text": "hái thuốc" },
+    { "text": "Thanh Tẩy" },
+
+    { "text": "Sinh Môn" },
+    { "text": "Khai Môn" },
+    { "text": "Hưu Môn" },
+    { "text": "Cảnh Môn" },
+    { "text": "Kinh Môn" },
+    { "text": "Đỗ Môn" },
+    { "text": "Thương Môn" },
+    { "text": "Tử Môn" }
+  ]
+}
